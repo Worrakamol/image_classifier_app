@@ -11,7 +11,6 @@ import numpy as np
 from PIL import Image
 import pickle
 
-model = MobileNetV2(weights="imagenet")
 
 # โหลดโมเดล
 with open('model.pkl', 'rb') as f:
