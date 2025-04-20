@@ -39,6 +39,6 @@ if upload_file is not None:
     
    
     #display predictions
-    print("Predictions:")
+    st.subheader("Prediction")
     for i, pred in enumerate(top_preds):
-        print(f"{i+1}. **{pred[1]}** — {round(pred[2]*100, 2)}%")
+        st.write(f"{i+1}. **{pred[1]}** — {round(pred[2]*100, 2)}%")
