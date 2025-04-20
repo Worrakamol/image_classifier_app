@@ -16,7 +16,7 @@ with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # หัวข้อ
-st.title("📄 Image Classification with MobileNetV2")
+st.title("📄 Image Classification with MobileNetV2 by Worrakamol Nantipatpanya")
 st.caption("by Worrakamol Nantipatpanya")
 
 # อัปโหลดไฟล์ภาพ
