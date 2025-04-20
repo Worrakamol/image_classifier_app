@@ -5,7 +5,6 @@ Created on Sun Apr 20 13:52:44 2025
 @author: LAB
 """
 import streamlit as st
-import tensorflow as tf
 from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2, decode_predictions, preprocess_input
 from tensorflow.keras.preprocessing import image
 import numpy as np
@@ -17,7 +16,7 @@ with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # หัวข้อ
-st.title("Image Classification with MoblieNetV2 by Wichayarin Rattaphonwalitpong")
+st.title("Image Classification with MoblieNetV2 by Worrakamol Nantipatpanya")
 
 #file upload
 upload_file = st.file_uploader("Upload image:",type = ["jpg","jpeg","png"])
@@ -28,7 +27,7 @@ if upload_file is not None:
     st.image(img, caption = "Upload Image")
     
     #preprocess
-    img = img.resize(224,224)
+    img = img.resize((224,224))
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
     x = preprocess_input(x)
