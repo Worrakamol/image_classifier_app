@@ -17,7 +17,7 @@ with open('model.pkl', 'rb') as f:
 
 # หัวข้อ
 st.title("📄 Image Classification with MobileNetV2 by Worrakamol Nantipatpanya")
-st.caption("by Worrakamol Nantipatpanya")
+
 
 # อัปโหลดไฟล์ภาพ
 upload_file = st.file_uploader("📤 Upload an image file", type=["jpg", "jpeg", "png"])
