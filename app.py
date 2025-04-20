@@ -11,6 +11,8 @@ import numpy as np
 from PIL import Image
 import pickle
 
+model = MobileNetV2(weights="imagenet")
+
 # โหลดโมเดล
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
@@ -19,7 +21,7 @@ with open('model.pkl', 'rb') as f:
 st.title("Image Classification with MoblieNetV2 by Worrakamol Nantipatpanya")
 
 #file upload
-upload_file = st.file_uploader("Upload image:", type=["jpg", "jpeg", "png"]
+upload_file = st.file_uploader("Upload image:",type = ["jpg","jpeg","png"])
 
 if upload_file is not None:
     #display image on screen
@@ -32,7 +34,7 @@ if upload_file is not None:
     x = np.expand_dims(x, axis=0)
     x = preprocess_input(x)
     
-    # Prediction
+   # Prediction
     preds = model.predict(x)
     top_preds = decode_predictions(preds, top=3)[0]
     
