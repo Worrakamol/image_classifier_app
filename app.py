@@ -13,8 +13,9 @@ import pickle
 
 
 # โหลดโมเดล
-with open('model.pkl', 'rb') as f:
-    model = pickle.load(f)
+#with open('model.pkl', 'rb') as f:
+    #model = pickle.load(f)
+model = MobileNetV2(weights="imagenet")
 
 # หัวข้อ
 st.title("Image Classification with MoblieNetV2 by Worrakamol Nantipatpanya")
