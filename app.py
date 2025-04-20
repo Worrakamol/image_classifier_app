@@ -25,7 +25,7 @@ upload_file = st.file_uploader("📤 Upload image:", type=["jpg", "jpeg", "png"]
 if upload_file is not None:
     # แสดงรูป
     img = Image.open(upload_file)
-    st.image(img, caption="🖼️ Uploaded Image", use_column_width=True)
+    st.image(img, caption="🖼️ Uploaded Image")
 
     # แปลงภาพให้เป็น RGB หากยังไม่ใช่
     if img.mode != "RGB":
